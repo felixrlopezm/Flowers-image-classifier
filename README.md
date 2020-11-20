@@ -21,6 +21,7 @@ The predictor makes predictions about a flower image type input by the user. It 
 Argparse module is used for passing the code the command line arguments provided by the user when running the program from a terminal window. If the user fails to provide some or all of the arguments, then the default values are used instead.
 
     Expected Call indicated with <> next: python predict.py <image path> <checkpoint file path> --category_names <cat_to_name.json file>  --arch <model> --topk <value>
+    
     Example call:python predict.py image_06054.jpg densenet_model_checkpoint.pth --topk 3 --arch densenet161
     
 The repository includes three trained models ready to use (the checkpoint file to be called with the predict.py file as indicated before). Each trained mode corresponds to the CNN networks indicated before. However, the network can be trained again with different hyperparameters by means of the train.py file as indicated before.
