@@ -8,19 +8,19 @@ Code is written in Python and uses Pytorch for the training the neural network.
 The code is organized in two parts:
 
 1.- Trainer files that preprocess the images and train the image classifier on your dataset
-
 2.- Predictor files that is able to predicts image content (provided that its class is one of the categories the classifier has been trained in)
 
 The trainer trains a classifier for flower images using a pretrained CNN model and ad hoc classifier. Three CNN architectures are available for the user: VGG-16, DenseNet161, AlexNet. It saves the model as a checkpoint once trained. It prints out training loss, validation loss, and validation accuracy as the network trains.
 Argparse module is used for passing the code the command line arguments provided by the user when running the program from a terminal window. If the user fails to provide some or all of the arguments, then the default values are used instead.
-    Expected Call indicated with <> next: python train.py <directory with images> --save_dir <directory for checkpoint file> --arch <model> --learning_rate <value>                        
-                                          --epochs <value> --dropout <value>
+
+    Expected Call indicated with <> next: python train.py <directory with images> --save_dir <directory for checkpoint file> --arch <model> --learning_rate <value> --epochs <value> --dropout <value>
+    
     Example call: python train.py flowers/ --arch VGG-16 --epoch 8 --gpu YES
     
 The predictor makes predictions about a flower image type input by the user. It uses a pretrained network, which is input from the user and loaded CNN model and ad hoc classifier. Three CNN architectures are available for the user: VGG-16, DenseNet161, AlexNet. It returns the most K likely flower types (K as required from user). And it also identifies the name of the flower type using a mapping of categories to real names (cat_to_name.json file).
 Argparse module is used for passing the code the command line arguments provided by the user when running the program from a terminal window. If the user fails to provide some or all of the arguments, then the default values are used instead.
-    Expected Call indicated with <> next: python predict.py <image path> <checkpoint file path> --category_names <cat_to_name.json file>  --arch <model>
-                                          --topk <value>
+
+    Expected Call indicated with <> next: python predict.py <image path> <checkpoint file path> --category_names <cat_to_name.json file>  --arch <model> --topk <value>
     Example call:python predict.py image_06054.jpg densenet_model_checkpoint.pth --topk 3 --arch densenet161
     
 The repository includes three trained models ready to use (the checkpoint file to be called with the predict.py file as indicated before). Each trained mode corresponds to the CNN networks indicated before. However, the network can be trained again with different hyperparameters by means of the train.py file as indicated before.
