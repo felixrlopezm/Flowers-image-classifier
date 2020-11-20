@@ -26,3 +26,5 @@ Argparse module is used for passing the code the command line arguments provided
     
 The repository includes three trained models ready to use (the checkpoint file to be called with the predict.py file as indicated before). Each trained mode corresponds to the CNN networks indicated before. However, the network can be trained again with different hyperparameters by means of the train.py file as indicated before.
 
+## How to install the codes.
+Just clone the repository in your working directory, open a terminal shell there and call train.py or predict.py
