@@ -26,5 +26,5 @@ Argparse module is used for passing the code the command line arguments provided
     
 For using the network, first train it with any of the CNN options and a different set of hyperparameters by means of the train.py file as indicated before. Use of GPU is recomended for training VGG-16 and DenseNet161 CNNs. Then carry out the prediction of any flower image by calling the predict.py file as inidicated before. 
 
-## How to install the codes.
+## How to install the code.
 Just clone the repository in your working directory, open a terminal shell there and call train.py or predict.py
