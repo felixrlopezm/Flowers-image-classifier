@@ -6,7 +6,9 @@ The classifier works with a dataset of 102 flower categories. The dataset has to
 Code is written in Python and uses Pytorch for the training the neural network.
 
 The code is organized in two parts:
+
 1.- Trainer files that preprocess the images and train the image classifier on your dataset
+
 2.- Predictor files that is able to predicts image content (provided that its class is one of the categories the classifier has been trained in)
 
 The trainer trains a classifier for flower images using a pretrained CNN model and ad hoc classifier. Three CNN architectures are available for the user: VGG-16, DenseNet161, AlexNet. It saves the model as a checkpoint once trained. It prints out training loss, validation loss, and validation accuracy as the network trains.
